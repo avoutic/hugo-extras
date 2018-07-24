@@ -1,0 +1,2 @@
+{{ $caption := printf "<table><caption>%s</caption>" ( .Get "caption" ) }}
+{{ .Inner | replaceRE "<table>" $caption | safeHTML }}
